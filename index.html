@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Compuerta Lógica</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Ingrese los valores de salida (S)</h2>
+    <table>
+      <thead>
+        <tr><th>A</th><th>B</th><th>S</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>0</td><td><input id="s00" maxlength="1"></td></tr>
+        <tr><td>0</td><td>1</td><td><input id="s01" maxlength="1"></td></tr>
+        <tr><td>1</td><td>0</td><td><input id="s10" maxlength="1"></td></tr>
+        <tr><td>1</td><td>1</td><td><input id="s11" maxlength="1"></td></tr>
+      </tbody>
+    </table>
+    <button onclick="enviar()">Generar expresión</button>
+    <div id="resultado"></div>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
