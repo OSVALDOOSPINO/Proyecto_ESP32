@@ -1,57 +1,125 @@
 body {
   font-family: Arial, sans-serif;
-  background: #eef2f5;
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-}
-.card {
-  background: white;
+  background-color: #fff;
+  margin: 0;
   padding: 20px;
+}
+
+.container {
+  background-color: #e6f2ff;
+  border: 2px solid #3399ff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px #bbb;
-  width: 300px;
+  padding: 20px;
+  width: 90%;        
+  max-width: 600px;    
+  margin: 0 auto;     
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-h2 {
-  text-align: center;
+
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  display: block;      
+  overflow-x: auto;  
 }
-td, th {
+
+th, td {
+  border: 1px solid #3399ff;
+  padding: 4px;
   text-align: center;
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
 }
-input {
-  width: 30px;
-  text-align: center;
+
+th {
+  background-color: #cce6ff;
 }
-button {
-  margin-top: 10px;
+
+input[type="text"] {
   width: 100%;
-  padding: 10px;
-  background: #007acc;
-  color: white;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #3399ff;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+button {
+  padding: 6px 15px;
+  background-color: #3399ff;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#resultado.exito {
-  background: #e6ffe6;
-  border-left: 6px solid #00cc00;
-  color: #004d00;
+button:hover {
+  background-color: #267acc;
 }
 
-#resultado.error {
-  background: #ffe6e6;
-  border-left: 6px solid #cc0000;
-  color: #660000;
+#generate {
+  margin-top: 20px;
+  padding: 8px 10px;
+  background-color: #3399ff;
 }
 
-button:disabled {
-  background: #999;
-  cursor: wait;
+#error {
+  color: red;
+  margin-top: 10px;
+}
+
+#output {
+  margin-top: 15px;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+.gates-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.gate-card {
+  background: #fff;
+  border: 1px solid #3399ff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gate-card h4 {
+  margin: 0 0 8px;
+  color: #003d99;
+  font-size: 1rem;
+}
+
+.gate-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+  button {
+    width: 100%;
+  }
+  #generate {
+    margin-top: 30px;
+  }
+  input[type="text"] {
+    padding: 6px;
+  }
 }

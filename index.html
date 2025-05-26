@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Compuerta Lógica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador Booleano</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="card">
-    <h2>Ingrese los valores de salida (S)</h2>
-    <table>
-      <thead>
-        <tr><th>A</th><th>B</th><th>S</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>0</td><td>0</td><td><input id="s00" maxlength="1"></td></tr>
-        <tr><td>0</td><td>1</td><td><input id="s01" maxlength="1"></td></tr>
-        <tr><td>1</td><td>0</td><td><input id="s10" maxlength="1"></td></tr>
-        <tr><td>1</td><td>1</td><td><input id="s11" maxlength="1"></td></tr>
-      </tbody>
-    </table>
-    <button onclick="enviar()">Generar expresión</button>
-    <div id="resultado"></div>
+  <div class="container">
+    <h2>Generador de Expresiones Booleanas</h2>
+    <div class="buttons">
+      <button id="add-var">+ Añadir Variable</button>
+      <button id="remove-var">– Quitar Variable</button>
+    </div>
+    <div id="table-container"></div>
+    <button id="generate">Generar Expresión</button>
+    <div id="output"></div>
+
+    <h3>Puertas Lógicas</h3>
+    <div id="gates-info" class="gates-container"></div>
   </div>
   <script src="/script.js"></script>
 </body>
